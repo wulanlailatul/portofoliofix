@@ -12,7 +12,7 @@ export default function Typing() {
         500,
         'Tailwind CSS',
         500,
-        'React.js',
+        'React Native',
         500
       ]}
       wrapper="span"
