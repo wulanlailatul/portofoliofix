@@ -1,37 +1,31 @@
 [
     {
-      "title": "Software Engineer",
-      "company": "19bytes",
-      "tasks": "Building a responsive dashboard for an AI-powered application for handling project proposals",
-      "tags": ["React.js", "Typescript", "Vite/Vitest", "React Testing Library", "Material UI"],
+      "title": "On Job Training",
+      "company": "United Tractors Corporate University",
+      "tasks": "Building a dashboard website for mentors' needs in monitoring employees who are mentoring and coaching. and making html code into react native in making an excavator calculator.",
+      "tags": ["Next.js", "Typescript", "Figma", "Integrasi API", "React Native"],
+      "year": 2025
+    },
+    {
+      "title": "IT Programmer Training",
+      "company": "United Tractors School",
+      "tasks": "IT training to develop the technical skills of the younger generation in programming, web development, and information technology. By learning all programming languages ​​and frameworks.",
+      "tags": ["Fullstack Developer", "Tailwind CSS"],
+      "year": 2024
+    },
+     {
+      "title": "Iternship at vocational school",
+      "company": "Midas Visual Studio",
+      "tasks": "Involved in video editing and videographer crew in events such as weddings, video clips, company profiles and others.",
+      "tags": ["Adobe Premiere Pro", "Adobe After Effect", "Adobe Photoshop", "Figma", "Canva"],
       "year": 2024
     },
     {
-      "title": "Work & Travel",
-      "company": "Australia",
-      "tasks": "Engaged in a transformative journey through Australia, combining work opportunities with self-directed education, fostering personal and professional growth",
-      "tags": ["Next.js", "Typescript", "Tailwind CSS", "Jest", "Padi Open Water Diver"],
+      "title": "Vocational High School",
+      "company": "Smk Brantas Karangkates",
+      "tasks": "With a major in Visual Communication Design, there are many things that are taught, especially in terms of design, photography and videography. Starting from how to use it to how to create and process it.",
+      "tags": ["Adobe Premiere Pro", "Adobe Photoshop", "Corel Draw", "Camera Mirrorless & DSLR"],
       "year": 2022
-    },
-    {
-      "title": "Frontend Developer",
-      "company": "Vivents Interactive",
-      "tasks": "Rebuilt a chat-system for an online plattform, enhancing the user experience and significantly increased the end user satisfaction",
-      "tags": ["React.js", "Typescript", "Redux", "GraphQL", "Jest"],
-      "year": 2021
-    },
-    {
-      "title": "Software Developer",
-      "company": "German Cancer Research Center",
-      "tasks": "Integrated APIs and databases for a medical application used by doctors and bioinformaticians to plan molecular therapies",
-      "tags": ["Java EE", "SQL", "REST", "JDBC"],
-      "year": 2019
-    },
-    {
-      "title": "Intern & Student Assistant",
-      "company": "Edataconsulting",
-      "tasks": "Developed an AR application which has been used on fairs and exhibitions to promote and showcase the company interactively",
-      "tags": ["Unity", "C#", "Blender", "Microsoft Hololens"],
-      "year": 2017
     }
+   
 ]  

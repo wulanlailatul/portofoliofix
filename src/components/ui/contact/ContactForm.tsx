@@ -1,11 +1,7 @@
-import { useRef } from "react";
-import HCaptcha from "@hcaptcha/react-hcaptcha";
 import useContactForm from "src/hooks/useContactForm";
 import SubmitButton from "./SubmitButton";
 
 export default function ContactForm() {
-  const captchaRef = useRef<HCaptcha | null>(null);
-
   const {
     formData,
     success,
@@ -13,12 +9,7 @@ export default function ContactForm() {
     loading,
     handleChange,
     handleSubmit,
-    setToken,
   } = useContactForm();
-
-  function onLoad() {
-    captchaRef?.current?.execute();
-  };
 
   return (
     <section className="fixed top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 desktop:w-1/3 ultra:w-1/4 mobile:w-full mobile:px-4 mobile:max-w-3xl">
@@ -27,7 +18,11 @@ export default function ContactForm() {
           <img className="animate-scalepulse h-1/4 w-1/4 pb-4" src="/images/pigeon.webp" alt="Carrier Pigeon" />
         </div>
 
-        {success ? <div className="text-xl flex justify-center items-center h-16">{<span className="animate-fadeIn">{"Message sent!"}</span>}</div> :
+        {success ? (
+          <div className="text-xl flex justify-center items-center h-16">
+            <span className="animate-fadeIn">{"Message sent!"}</span>
+          </div>
+        ) : (
           <form name="contact" onSubmit={handleSubmit}>
             <div>
               <label htmlFor="email" className="block mb-2 text-sm font-medium text-white ">Email</label>
@@ -41,20 +36,11 @@ export default function ContactForm() {
               <label htmlFor="message" className="block my-2 text-sm font-medium text-white">Message</label>
               <textarea id="message" name="message" rows={6} value={formData.message} onChange={handleChange} required className="block p-2.5 w-full text-sm text-gray-800 bg-gray-50 rounded-lg shadow-sm border border-gray-300 focus:ring-primary-500 focus:border-primary-500" placeholder="Your message..."></textarea>
             </div>
-            <div className="pt-4 animate-fadeIn h-24 ">
-              <HCaptcha
-                sitekey={process.env.NEXT_PUBLIC_HCAPTCHA_SITEKEY || ""}
-                onLoad={() => onLoad}
-                onVerify={(token) => setToken(token)}
-                onExpire={() => setToken(null)}
-                ref={captchaRef}
-              />
-            </div>
             <SubmitButton loading={loading} />
-            {error && <div className="text-xl flex justify-center items-center h-16">{error}</div>}
+            {error && <div className="text-xl text-red-500 flex justify-center items-center h-16">{error}</div>}
           </form>
-        }
+        )}
       </div>
     </section>
-  )
+  );
 }

@@ -1,4 +1,6 @@
 import { useState } from 'react';
+import { db } from '@/lib/firebase';
+import { collection, addDoc, query, where, getDocs } from 'firebase/firestore';
 
 export default function useContactForm() {
   const [formData, setFormData] = useState({
@@ -10,42 +12,66 @@ export default function useContactForm() {
   const [success, setSuccess] = useState<boolean>(false);
   const [loading, setLoading] = useState<boolean>(false);
   const [error, setError] = useState<string | null>(null);
-  const [token, setToken] = useState<string | null>(null);
 
   function handleChange(e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) {
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
+  }
 
   async function handleSubmit(e: React.FormEvent) {
-    e.preventDefault();
-    setLoading(true);
-    setError(null);
+  e.preventDefault();
+  setLoading(true);
+  setError(null);
 
-    if (!token) {
-      setError('CAPTCHA not completed');
+  try {
+    // 🔍 Cek apakah email sudah pernah digunakan
+    const q = query(
+      collection(db, 'messages'),
+      where('email', '==', formData.email)
+    );
+    const snapshot = await getDocs(q);
+
+    if (!snapshot.empty) {
+      setError('Email ini sudah pernah digunakan untuk mengirim pesan.');
       setLoading(false);
       return;
     }
 
-    try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({ formData, token }),
-      });
+    // ✅ Kirim ke Formspree
+    const response = await fetch('https://formspree.io/f/xvgrjvwq', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+        Accept: 'application/json',
+      },
+      body: JSON.stringify({
+        name: formData.name,
+        email: formData.email,
+        message: formData.message,
+        _subject: `Pesan dari ${formData.name}`,
+        _replyto: formData.email,
+      }),
+    });
 
-      if (!response.ok) {
-        throw new Error(`Failed to submit: ${response.statusText}`);
-      }
-
-      setSuccess(true);
-      setFormData({ name: '', email: '', message: '' });
-    } catch (error: any) {
-      setError(error.message || 'An error occurred');
-    } finally {
-      setLoading(false);
+    const result = await response.json();
+    if (!result.ok) {
+      throw new Error(result?.errors?.[0]?.message || 'Gagal kirim via Formspree');
     }
-  };
+
+    // 🔥 Simpan ke Firestore
+    await addDoc(collection(db, 'messages'), {
+      ...formData,
+      createdAt: new Date(),
+    });
+
+    setSuccess(true);
+    setFormData({ name: '', email: '', message: '' });
+  } catch (error: any) {
+    setError(error.message || 'Terjadi kesalahan');
+  } finally {
+    setLoading(false);
+  }
+}
+
 
   return {
     formData,
@@ -54,6 +80,5 @@ export default function useContactForm() {
     loading,
     handleChange,
     handleSubmit,
-    setToken,
   };
 }
