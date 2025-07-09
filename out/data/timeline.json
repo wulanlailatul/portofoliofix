@@ -1,0 +1,31 @@
+[
+    {
+      "title": "On Job Training",
+      "company": "United Tractors Corporate University",
+      "tasks": "Building a dashboard website for mentors' needs in monitoring employees who are mentoring and coaching. and making html code into react native in making an excavator calculator.",
+      "tags": ["Next.js", "Typescript", "Figma", "Integrasi API", "React Native"],
+      "year": 2025
+    },
+    {
+      "title": "IT Programmer Training",
+      "company": "United Tractors School",
+      "tasks": "IT training to develop the technical skills of the younger generation in programming, web development, and information technology. By learning all programming languages ​​and frameworks.",
+      "tags": ["Fullstack Developer", "Tailwind CSS"],
+      "year": 2024
+    },
+     {
+      "title": "Iternship at vocational school",
+      "company": "Midas Visual Studio",
+      "tasks": "Involved in video editing and videographer crew in events such as weddings, video clips, company profiles and others.",
+      "tags": ["Adobe Premiere Pro", "Adobe After Effect", "Adobe Photoshop", "Figma", "Canva"],
+      "year": 2024
+    },
+    {
+      "title": "Vocational High School",
+      "company": "Smk Brantas Karangkates",
+      "tasks": "With a major in Visual Communication Design, there are many things that are taught, especially in terms of design, photography and videography. Starting from how to use it to how to create and process it.",
+      "tags": ["Adobe Premiere Pro", "Adobe Photoshop", "Corel Draw", "Camera Mirrorless & DSLR"],
+      "year": 2022
+    }
+   
+]  

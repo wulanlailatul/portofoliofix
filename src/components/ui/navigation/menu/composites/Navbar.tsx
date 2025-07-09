@@ -12,15 +12,10 @@ export default function Navbar() {
           : 'opacity-0 hover:opacity-100 transition-opacity duration-500'
       }`}
     >
-      <div className="flex items-center justify-between bg-gradient-to-r from-transparent to-black text-white text-2xl h-14 px-8 w-full max-w-screen-xl mx-auto">
-        {/* Kiri: Menu item */}
+      <div className="flex items-center justify-end bg-gradient-to-r from-transparent to-black text-white text-2xl h-14 px-8 w-full max-w-screen-xl mx-auto">
+        {/* Menu utama dipindah ke kanan */}
         <div className="flex space-x-8">
           <Menu />
-        </div>
-
-        {/* Kanan: Toggle Bahasa */}
-        <div>
-          <Menu onlyToggle />
         </div>
       </div>
     </div>

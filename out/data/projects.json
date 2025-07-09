@@ -11,28 +11,28 @@
     "image": "/images/bahan2.png",
     "link": "https://drive.google.com/file/d/1HfWWEgpE3Q8z0asD9loBqmU_9zOPS35u/view?usp=drive_link",
     "tags": ["React Native CLI", "Typescript", "Tailwind CSS"],
-    "text": "A mobile application for calculating excavator productivity, built with React Native CLI and styled using Tailwind CSS."
+    "text": "A single-page application with responsive design that highlights professional work and services"
     },
     {
     "title": "Web.Toko Bunga",
-    "image": "/images/tokobunga.png",
-    "link": "https://github.com/wulanlailatul/toko_bunga",
+    "image": "/images/Monomind.webp",
+    "link": "https://www.monomind.info",
     "tags": ["Laravel", "MySQL", "Tailwind CSS"],
-    "text": "An e-commerce website for ordering flowers online, developed using Laravel, MySQL, and styled with Tailwind CSS."
+    "text": "A monophonic synthesizer to play and record synth bass lines from the 80s"
     },
-    {
+     {
     "title": "Web.Mentoring-Coaching(UT)",
-    "image": "/images/karyawanweb.png",
-    "link": "https://github.com/wulanlailatul/website-employee",
+    "image": "/images/Monomind.webp",
+    "link": "https://www.monomind.info",
     "tags": ["Next.js", "Typescript", "Tailwind CSS", "MySQL", "Postman"],
-    "text": "A web-based dashboard system for managing mentoring and coaching sessions for employees, built with Next.js, Typescript, and MySQL."
+    "text": "A monophonic synthesizer to play and record synth bass lines from the 80s"
     },
     {
     "title": "3D Building Grow Effect",
     "image": "/images/thumbnail.png",
     "link": "https://www.youtube.com/watch?v=Nsg4sX2ehdg",
     "tags": ["Adobe Premiere Pro", "Adobe Photoshop"],
-    "text": "A visual effect project demonstrating a 3D building growth animation using Adobe Premiere Pro and Photoshop."
+    "text": "A project management tool to administer and keep track of ongoing tasks"
     }
     
 ]
