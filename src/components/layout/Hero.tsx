@@ -16,7 +16,7 @@ export default function Hero() {
       <div className="flex flex-col z-20 pointer-events-none text-white desktop:w-3/5 mobile:w-full mobile:text-center">
         <motion.div initial="visible" animate="hidden" variants={variants}>
           <p className="desktop:text-[5vw] ultra:text-[4vw] mobile:text-[8vw] font-bold text-lightcyan w-full">Greetings, I&apos;m Wulan Lailatul Mufidah </p>
-          <div className="desktop:text-[3vw] ultra:text-[2vw] mobile:text-[5vw]">a frontend developer specializing <p>in web applications with<Typing /></p></div>
+          <div className="desktop:text-[3vw] ultra:text-[2vw] mobile:text-[5vw]">Video Editing and frontend developer<p>specializing in<Typing /></p></div>
           <div className='flex mobile:hidden mt-6 justify-start'><SocialMedia size={35} /></div>
         </motion.div>
       </div>

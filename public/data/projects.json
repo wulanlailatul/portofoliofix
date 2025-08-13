@@ -26,13 +26,7 @@
     "link": "https://github.com/wulanlailatul/website-employee",
     "tags": ["Next.js", "Typescript", "Tailwind CSS", "MySQL", "Postman"],
     "text": "A web-based dashboard system for managing mentoring and coaching sessions for employees, built with Next.js, Typescript, and MySQL."
-    },
-    {
-    "title": "3D Building Grow Effect",
-    "image": "/images/thumbnail.png",
-    "link": "https://www.youtube.com/watch?v=Nsg4sX2ehdg",
-    "tags": ["Adobe Premiere Pro", "Adobe Photoshop"],
-    "text": "A visual effect project demonstrating a 3D building growth animation using Adobe Premiere Pro and Photoshop."
     }
+   
     
 ]

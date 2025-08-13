@@ -5,7 +5,7 @@ export default function Footer() {
     <img className="w-full h-44" src="/transitions/transition_grey.svg" alt="transition" />
     <div className="flex desktop:justify-center mobile:justify-center mobile:flex-wrap w-full text-white pt-8">
       <div className="flex flex-col text-3xl desktop:w-1/3 mobile:w-full mobile:justify-center mobile:mb-8 self-center text-center ">
-        <span className="text-3xl font-bold px-2">Frontend Developer.net</span>
+        <span className="text-3xl font-bold px-2">Editing Video and Frontend Developer.net</span>
         <span className="text-lg">Where Ideas Meet Execution</span>
       </div>
     </div>

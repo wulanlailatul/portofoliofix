@@ -23,7 +23,9 @@ export default function Services() {
           desc="Professional video editing with Adobe Premiere Pro and CapCut according to promotional, event, or creative content needs."
           img="/images/editingvideo.jpg"
         />
+        
       </div>
+
 
       <p className="desktop:text-[40px] mobile:text-[24px] font-bold my-4 text-center">
         You have a project? Get in Touch

@@ -13,6 +13,8 @@ export default function Typing() {
         'Tailwind CSS',
         500,
         'Next.js',
+        500,
+        'Adobe Premiere Pro',
         500
       ]}
       wrapper="span"
